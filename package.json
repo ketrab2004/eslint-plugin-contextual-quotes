@@ -1,12 +1,13 @@
 {
     "name": "eslint-plugin-contextual-quotes",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Enforce use of specific quotes based on the content of the string.",
     "license": "MIT OR Apache-2.0",
     "author": "ketrab2004",
     "keywords": [
         "eslint",
         "plugin",
+        "rule",
         "quote"
     ],
     "homepage": "https://github.com/ketrab2004/eslint-plugin-contextual-quotes#readme",
