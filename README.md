@@ -1,4 +1,6 @@
 # Contextual Quotes
+[![Node.js CI](https://github.com/ketrab2004/eslint-plugin-contextual-quotes/actions/workflows/node.js.yml/badge.svg)](https://github.com/ketrab2004/eslint-plugin-contextual-quotes/actions/workflows/node.js.yml)
+
 Enforce the use of specific quotes based on the content of the string.
 
 * `'` for empty strings and strings with only a single character
