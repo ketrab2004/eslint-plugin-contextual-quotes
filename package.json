@@ -1,0 +1,30 @@
+{
+    "name": "eslint-plugin-contextual-quotes",
+    "version": "0.1.0",
+    "description": "Enforce use of specific quotes based on the content of the string.",
+    "license": "MPL-2.0",
+    "author": "ketrab2004",
+    "keywords": [
+        "eslint",
+        "plugin",
+        "quote"
+    ],
+    "homepage": "https://github.com/ketrab2004/eslint-plugin-contextual-quotes#readme",
+    "bugs": {
+        "url": "https://github.com/ketrab2004/eslint-plugin-contextual-quotes/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ketrab2004/eslint-plugin-contextual-quotes.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "test": "jasmine --config=tests/lib/jasmine.json"
+    },
+    "devDependencies": {
+        "jasmine": "^4.5.0"
+    },
+    "peerDependencies": {
+        "eslint": "^8.33.0"
+    }
+}
