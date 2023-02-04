@@ -23,7 +23,8 @@ Add `contextual-quotes` to the plugins section of your `.eslintrc` file.
 {
     "plugins": [
         "contextual-quotes"
-    ]
+    ],
+    ...
 }
 ```
 
@@ -33,7 +34,7 @@ Then setup the actual rule under rules in your `.eslintrc` file.
     ...
     "rules": {
         ...
-        "contextual-quotes/contextual-quotes": ["error", { "applyFix": "never" }]
+        "contextual-quotes/contextual-quotes": "error"
     }
 }
 ```
@@ -50,6 +51,7 @@ Then setup the actual rule under rules in your `.eslintrc` file.
 {
     ...
     "rules": {
+        ...
         "contextual-quotes/contextual-quotes": ["error", { "applyFix": "always", "emoijAsSingleCharacter": "always" }]
     }
 }
