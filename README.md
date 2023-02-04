@@ -1,5 +1,6 @@
 # Contextual Quotes
-[![Node.js CI](https://github.com/ketrab2004/eslint-plugin-contextual-quotes/actions/workflows/node.js.yml/badge.svg)](https://github.com/ketrab2004/eslint-plugin-contextual-quotes/actions/workflows/node.js.yml)
+[![npm](https://img.shields.io/npm/v/eslint-plugin-contextual-quotes?style=plastic)](https://www.npmjs.com/package/eslint-plugin-contextual-quotes)
+[![Tests](https://github.com/ketrab2004/eslint-plugin-contextual-quotes/actions/workflows/node.js.yml/badge.svg)](https://github.com/ketrab2004/eslint-plugin-contextual-quotes/actions/workflows/node.js.yml)
 
 Enforce the use of specific quotes based on the content of the string.
 
