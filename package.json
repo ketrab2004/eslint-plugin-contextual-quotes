@@ -1,6 +1,6 @@
 {
     "name": "eslint-plugin-contextual-quotes",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Enforce use of specific quotes based on the content of the string.",
     "license": "MIT OR Apache-2.0",
     "author": "ketrab2004",
