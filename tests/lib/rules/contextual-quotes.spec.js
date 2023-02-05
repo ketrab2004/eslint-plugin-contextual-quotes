@@ -14,6 +14,7 @@ ruleTester.run("contextual-quotes", contextualQuotes, {
 		"const a = \"word\"",
 		"const a = `something ${a}`",
 		"const a = \"something \\${a}\"",
+		"const a = wow`no expression`",
 
 		{
 			code: "const a = '😎'",
