@@ -54,6 +54,7 @@ Then setup the actual rule under rules in the same configuration file.
     * `"always"` Count string length in visual characters
 
 ```json
+// .eslintrc
 {
     ...
     "rules": {
