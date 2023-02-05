@@ -22,7 +22,7 @@ ruleTester.run("contextual-quotes", contextualQuotes, {
 			}]
 		},
 		{
-			code: "const a = '👩‍❤️‍👩'",
+			code: "const a = '🇳🇱'",
 			options: [{
 				emoijAsSingleCharacter: "always"
 			}]
