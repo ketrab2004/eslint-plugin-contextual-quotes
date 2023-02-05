@@ -13,11 +13,19 @@ ruleTester.run("contextual-quotes", contextualQuotes, {
 		{ code: "const a = 'a'" },
 		{ code: "const a = \"word\""},
 		{ code: "const a = `something ${a}`" },
+		{ code: "const a = \"something \\${a}\"" },
 
 		{
 			code: "const a = '😎'",
 			options: [{
 				emoijAsSingleCharacter: "always"
+			}]
+		},
+
+		{
+			code: "const a = \"custom_escape${wowie}\"",
+			options: [{
+				expressionBlockEscapes: ['\\', "custom_escape"]
 			}]
 		}
 	],
@@ -30,8 +38,28 @@ ruleTester.run("contextual-quotes", contextualQuotes, {
 
 		{ code: "const a = 'aaa'", errors: [{ messageId: "string" }] },
 		{ code: "const a = `aaa`", errors: [{ messageId: "string" }] },
-		{ code: "const a = '😎'", errors: [{ messageId: "string" }] }
+		{ code: "const a = '😎'", errors: [{ messageId: "string" }] },
 
-		// { code: "const  = ", errors: [{ messageId: "" }] }
+		{ code: "const a = 'a ${\"aa\"}'", errors: [{ messageId: "templateLiteral" }] },
+		{ code: "const a = \"a ${'a'}\"", errors: [{ messageId: "templateLiteral" }] },
+
+		{
+			code: "const a = \"wowie ${something} \\${wowie}\"",
+			options: [{
+				expressionBlockEscapes: ["custom_escape", '\\']
+			}],
+			errors: [{
+				messageId: "templateLiteral",
+				suggestions: [
+					{ messageId: "replace" },
+					{
+						messageId: "escape",
+						output: "const a = \"wowie custom_escape${something} \\${wowie}\""
+					}
+				]
+			}]
+		}
+
+		// { code: "const a = ", errors: [{ messageId: "" }] }
 	]
 });
