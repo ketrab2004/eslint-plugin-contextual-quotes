@@ -10,10 +10,10 @@ const ruleTester = new RuleTester({
 
 ruleTester.run("contextual-quotes", contextualQuotes, {
 	valid: [
-		{ code: "const a = 'a'" },
-		{ code: "const a = \"word\""},
-		{ code: "const a = `something ${a}`" },
-		{ code: "const a = \"something \\${a}\"" },
+		"const a = 'a'",
+		"const a = \"word\"",
+		"const a = `something ${a}`",
+		"const a = \"something \\${a}\"",
 
 		{
 			code: "const a = '😎'",
