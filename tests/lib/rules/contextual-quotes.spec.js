@@ -21,6 +21,24 @@ ruleTester.run("contextual-quotes", contextualQuotes, {
 				emoijAsSingleCharacter: "always"
 			}]
 		},
+		{
+			code: "const a = '👩‍❤️‍👩'",
+			options: [{
+				emoijAsSingleCharacter: "always"
+			}]
+		},
+		{
+			code: "const a = '👨‍👩‍👧‍👦'",
+			options: [{
+				emoijAsSingleCharacter: "always"
+			}]
+		},
+		{
+			code: "const a = '👩‍💻'",
+			options: [{
+				emoijAsSingleCharacter: "always"
+			}]
+		},
 
 		{
 			code: "const a = \"custom_escape${wowie}\"",
