@@ -4,7 +4,7 @@
 
 Enforce the use of specific quotes based on the content of the string.
 
-* `'` for empty strings and strings with only a single character
+* `'` for empty strings and strings of only a single character
 * `"` for regular strings
 * `` ` `` for strings that use string interpolation
 
@@ -18,11 +18,12 @@ Next, install `eslint-plugin-contextual-quotes`:
 ```cmd
 $ npm install eslint-plugin-contextual-quotes --save-dev
 ```
-**Note**: If you installed ESLint globally (using the -g flag) then you must also install `eslint-plugin-contextual-quotes` globally.
+**Note**: If you have installed ESLint globally then you must also install this globally.
 
 ## Usage
-Add `contextual-quotes` to the plugins section of your `.eslintrc` file.
+Add `contextual-quotes` to the plugins section of your configuration file.
 ```json
+// .eslintrc
 {
     "plugins": [
         "contextual-quotes"
@@ -31,8 +32,9 @@ Add `contextual-quotes` to the plugins section of your `.eslintrc` file.
 }
 ```
 
-Then setup the actual rule under rules in your `.eslintrc` file.
+Then setup the actual rule under rules in the same configuration file.
 ```json
+// .eslintrc
 {
     ...
     "rules": {
@@ -43,10 +45,11 @@ Then setup the actual rule under rules in your `.eslintrc` file.
 ```
 
 ## Options
-* `"applyFix": "never"` Whether to apply fixes or give suggestions
-    * `"never"` Always give a suggestions
-    * `"always"` Always give a fix
-* `"emoijAsSingleCharacter": "never"` Whether to treat emoijs and other special characters as a single character (allow to be wrapped in just a `'`)
+* `"applyFix": "never"` Whether to apply fixes
+    * `"never"` Only give suggestions
+    * `"always"` Always give a fix along with the suggestions
+* `"expressionBlockEscapes": ["\\"]` What strings should be allowed to escape `${}` in regular strings. The first string in the list is used for the corresponding suggestion
+* `"emoijAsSingleCharacter": "never"` Whether to treat emoijs and other special characters as a single character (allow to be wrapped in just `'`)
     * `"never"` Count string length in utf-16 units
     * `"always"` Count string length in visual characters
 
@@ -55,10 +58,11 @@ Then setup the actual rule under rules in your `.eslintrc` file.
     ...
     "rules": {
         ...
-        "contextual-quotes/contextual-quotes": ["error", { "applyFix": "always", "emoijAsSingleCharacter": "always" }]
+        "contextual-quotes/contextual-quotes": ["error", {
+            "applyFix": "always",
+            "expressionBlockEscapes": ["custom_escape", "\\"],
+            "emoijAsSingleCharacter": "always"
+        }]
     }
 }
 ```
-
-## Limitations
-1. Won't give an error to convert a string like `"wow ${a}"` to use `` ` ``
